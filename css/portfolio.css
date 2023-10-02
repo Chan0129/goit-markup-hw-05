@@ -1,0 +1,64 @@
+:root {
+  --text-color: #434455;
+  --highlight-color: #4d5ae5;
+  --background-color: #2e2f42;
+}
+
+.navbartwo {
+  text-decoration: none;
+  justify-content: center;
+  display: flex;
+  height: 48px;
+  margin-top: 92px;
+  margin-bottom: 72px;
+}
+.navbartwo-link {
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #4d5ae5;
+  text-align: center;
+  letter-spacing: 0.64px;
+  margin: 24px;
+}
+
+.navbartwo-link:hover {
+  color: aliceblue;
+  background-color: #4d5ae5;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 116px;
+  height: 48px;
+}
+
+.all-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1440;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-list-container {
+  margin: 24px;
+  margin-bottom: 48px;
+  text-align: center;
+
+  justify-content: center;
+  margin-right: 20px;
+}
+.all-list-container :hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.all-list-container img {
+  max-width: 100%;
+  height: auto;
+}
+.style-footer {
+  background-color: var(--background-color);
+  display: flex;
+  padding: 40px;
+}
