@@ -99,28 +99,7 @@ body {
   padding-top: 120px;
   padding-top: 120px;
 }
-.button {
-  position: relative;
-  width: 169px;
-  height: 56px;
-  margin-top: 48px;
-  font-family: "Roboto", sans-serif;
-  background-color: var(--highlight-color);
-  border-radius: 4px;
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 0.64px;
-  line-height: 24px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.button:hover {
-  transition-duration: 0.4s;
-}
-.button:active {
-  background-color: var(--button-clicked);
-}
+
 /* END OF MAIN */
 
 /* OUR TEAM AND WHAT ARE WE DOING SECTION */
@@ -146,6 +125,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.4px;
   margin-left: 24px;
+  margin-bottom: 8px;
 }
 .description {
   line-height: 24px;
@@ -169,16 +149,22 @@ body {
 .images {
   list-style-type: none;
   display: flex;
-  margin: 24px;
-  justify-content: space-evenly;
+  gap: 24px;
+  justify-content: center;
   margin-bottom: 100px;
   padding-top: 10px;
   padding-bottom: 120px;
+   
 }
 
 .images img {
   max-width: 100%;
   height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+}
+.images  :hover {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .team-member {
@@ -197,8 +183,13 @@ body {
   border: 1px;
   width: 264px;
   height: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+}
+
+.image-container:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 
 .image-container img {
@@ -241,13 +232,14 @@ body {
   transition: background-color 0.3s;
 
   background-color: transparent;
-  position: relative; /* Add this for positioning */
-  overflow: hidden; /* Add this to clip child elements */
+  position: relative;
+  overflow: hidden;
 }
 
 .link:hover {
   background-color: var(--highlight-color);
   transition: fill 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* END OF CUSTOMER SECTION */
@@ -308,4 +300,76 @@ h6 {
 .linkin:hover {
   background-color: var(--button-clicked);
   transition-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.open {
+  position: relative;
+  padding: 16px 32px;
+  margin-top: 48px;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--highlight-color);
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.64px;
+  line-height: 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.open:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Styles for the modal */
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+  width: 408px;
+  height: 584px;
+  text-align: center;
+  transition: opacity 0;
+}
+.form {
+  padding-top: 50px;
+  text-align: left;
+  margin: 0%;
+}
+.form .form-text {
+  text-align: left;
+}
+.modal .close {
+  position: absolute;
+  border-width: 1px;
+  border-color: #e7e9fc;
+  width: 24px;
+  height: 24px;
+  margin-left: 200px;
+  font-weight: 400;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Styles for the modal content */
